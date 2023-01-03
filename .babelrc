@@ -1,0 +1,6 @@
+{
+  "presets": [
+    // 插件集合 preset-env
+    "@babel/preset-env"
+  ]
+}
