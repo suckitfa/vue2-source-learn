@@ -16,6 +16,8 @@ class Observer {
 
 // 响应式定义
 export function defineReactive(target,key,value) {
+  // 对所有的对象都进行属性劫持
+  observe(value);
   //闭包：当前变量不会被销毁
   Object.defineProperty(target,key,{
     // 读取的时候执行
