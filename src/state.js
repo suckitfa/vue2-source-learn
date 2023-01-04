@@ -14,6 +14,9 @@ function proxy(vm,target,key) {
     // vm.name
     get() {
       return vm[target][key]; // vm._data.name
+    },
+    set(newValue) {
+      vm[target][key] = newValue
     }
   })
 }
