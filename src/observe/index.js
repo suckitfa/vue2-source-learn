@@ -29,6 +29,8 @@ export function defineReactive(target,key,value) {
       if(newValue === value)  {
         return;
       }
+      // 再次代理
+      observe(newValue)
       value = newValue
     }
   })
